@@ -1,2 +1,6 @@
-# easy_dsa
-The reason to built this repo is to share knowledge on Data structures and algorithm. Anyone with same interest can contribute and share their knowledge
+# Computer Science for All.
+ This repository try to cover core computer subjects and topics which creates and underlying foundation to tackle various problems and eventuallty think like a __Computer Scientist__.
+ 
+ ## Contribution
+ Anyone and everyone interested to learn and also want to improve the content is welcomed.Irrespective of the technical background and expertise, we suggest anyone should try to contribute and share their knowledge for the same.
+ 
