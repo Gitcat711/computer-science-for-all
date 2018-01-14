@@ -43,21 +43,22 @@ Its essential to understand networking, especially who manages the servers. Apar
 5. Each layer has the ability to add its own _"wrapper"_ around the data that it receives from the adjacent layer, which will help the layers that come after it decide what to do with the data when it's received.
 
   #### OSI Model(Open Systems Interconnect)
-    > Its one of the method of talking about the different layers of network communication is the OSI model, Open Systems Interconnect. This model defines seven separate layers.
+   > Its one of the method of talking about the different layers of network communication is the OSI model, Open Systems Interconnect. This model defines seven separate layers.
 
-    - **`Application`** - The application layer is the layer that the users and user-applications most often interact with. Network communication is discussed in terms of availability of resources, partners to communicate with, and data synchronisation.
 
-    - **`Presentation`** - The Presentation layer is responsible for mapping resources and creating context. It is used to translate lower level of networking data into data that application expect us to see.
+   - **`Application`** - The application layer is the layer that the users and user-applications most often interact with. Network communication is discussed in terms of availability of resources, partners to communicate with, and data synchronisation.
 
-    - **`Session`**  - The session layer is a connection handler. It creates, maintains, and destroys connections  between nodes in a persistent way.
+   - **`Presentation`** - The Presentation layer is responsible for mapping resources and creating context. It is used to translate lower level of networking data into data that application expect us to see.
 
-    - **`Transport`**  - The transport layer is responsible for handling the layers above it a reliable connection. In this context, reliable refers to the ability to verify that a piece of data was received intact at the other end of the connection.(_This layer_ can resend the information that has been dropped or corrupted and can acknowledge the receipt of data to remote computers.)
+   - **`Session`**  - The session layer is a connection handler. It creates, maintains, and destroys connections  between nodes in a persistent way.
 
-    - **`Network`** - The network layer is used to route data between different nodes on the network. It uses addresses to be able to tell which computer to send information to. This layer can also break data/larger messages into smaller chunks, which are reassembled on the opposite end.
+   - **`Transport`**  - The transport layer is responsible for handling the layers above it a reliable connection. In this context, reliable refers to the ability to verify that a piece of data was received intact at the other end of the connection.(_This layer_ can resend the information that has been dropped or corrupted and can acknowledge the receipt of data to remote computers.)
 
-    - **`Data Link`** - This layer is implemented as a method of establishing and maintaining reliable links bwtween different nodes or devices on a network using existing physical connections.
+   - **`Network`** - The network layer is used to route data between different nodes on the network. It uses addresses to be able to tell which computer to send information to. This layer can also break data/larger messages into smaller chunks, which are reassembled on the opposite end.
 
-    - **`Physical`** - The physical layer is responsible for handling the actual physical devices that are used to make a connection. This layer involves the bare software that manages physical connections as well as the hardware itself(like Ethernet).
+   - **`Data Link`** - This layer is implemented as a method of establishing and maintaining reliable links bwtween different nodes or devices on a network using existing physical connections.
+
+   - **`Physical`** - The physical layer is responsible for handling the actual physical devices that are used to make a connection. This layer involves the bare software that manages physical connections as well as the hardware itself(like Ethernet).
 
   #### TCP/IP model
   > The most commonly known as Internet Protocol suite, is another layering model that is simpler and has been widely adopted. It defines the four separate layers, some of which share similarity with OSI model. You can observe that this model is bit more abstract and fluid. Thus results in easier implementation it it dominant way of categorising  the networking.
@@ -69,3 +70,27 @@ Its essential to understand networking, especially who manages the servers. Apar
    - **`Internet`** - The internet layer is used to transport data from node in a network. This layer is aware of the endpoints of the connections, but doesn't worry about actual connection needed to get from one place to another. IP addresses are defined in this layer as a way of reaching remote systems in an addressable manner.
 
    - **`Link`** - The link layer implements the actual topology of th local network that allows the internet layer to present an addressable interface. It establishes connections between neighbouring nodes to send data.
+
+
+### Interfaces
+- Interfaces are networking communication points for your compuyer. Each interface is associated with a physical or virtual networking device. Typically your server will have one configurable network interface for each Ethernet or wireless internet card you have. 
+- In addition, it will also define a Virtual Network Interface called "loopback" or localhost interface. This is used as an interface to connect applications and processes on a single computer to the other applications and processes. You can see this referenced as the _lo_ interace in many tools.
+----------------
+### Protocols
+- Networking works by piggybacking a number of different protocols on top of each other. In this way, one piece of data can be transmitted using multiple protocols encapsulated within one another.
+
+  #### Media Access Control.
+  - Media access control is a comunication protocol that is used to distinguish specific devices. Each device is suppoed to get a unique MAC address during the manufacturing porcess that differentiates it from every other device on the internet.
+  - Addressing hardware by the MAC address allows you to reference a device by a unique value even when the software on top may change the name for that specific device during operation.
+  - Media access control is one of the only protocols from the link layer that you are likely to interact with on a regular basis.
+  #### IP
+  - The IP protocol is one of the fundamental protocols that allow the internet to work. IP addresses are unique on each network and they allow machines to address each other across a network. It is implemented on the internet layer in the TCP/IP model.
+  - Networks can be linked together, but traffic must be routed when crossing network boundaries. This protocol assumes an unreliable network and multiple paths to the same destination that can dynamically change between.  
+  - There are number of different implementations of the protocol. The most common implementation today is IPv4, although IPv6 is growing in popularity as an alternative due to scarcity of IPv4 addresses available and improvements in the protocols capabilities. 
+  #### ICMP(Internet Control Message Protocol)
+  - It is used to send messages between devices to indicate the availabilty or error conditions. These packets are used in a variety of network diagnostic tools, such as ping or traceroute.
+  - Usually ICMP packets are transmitted when a packet of a different kind meets some kind of a problem. Basically, they are used as a feedback mechanism for network communications.
+  #### TCP (Transmission Control Protocol)
+  - It is implemented in the transport layer of the TCP/IP model and is used to establish reliable connections. 
+  - TCP is one of the protocols that encapsulates data into packets. It then transfers these to the remote ends of th connection using the methods available on the lower layers.
+  - On the other end, it can check for errors, request certain pieces to be resent, and reassemble the information into one logical piece to send to the application layer.
