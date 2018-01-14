@@ -58,3 +58,12 @@ PING google.com (x.x.x.x): 56 data bytes
   - A _highway_ has the capacity of moving 300 cars at the same time, this is `bandwidth`. But most of the times due to jam or congestion, the actual number of cars that it can move is around 200, this is `throughput`.
   - This distinction is relevant as ISPs usually advertise their `bandwidth` which is often higher than the `throughput` you will receive.
 - These metrics are computer over _single unit of time_, expressed as _bits/seconds(`bps`)_. Modersn networks are faster and therefore have their speed measured in millions of bits per second -> megabits/sec(`Mbps`) or in billions of bits/sec -> gigabits/sec(Gbps).   
+-----------
+#### 5. What is Jitter?
+- Jitter is defined as the variation in the delay of received packets in computer networks. While we know that **Latency** is the time it takes to move a packet from point A to B, **Jitter** is the _change_ in that time.
+- Jitter, referred as **Packet Delay Variation**(_though both are not completely synonymous , can be used interchangeably_), i an undesirable effect caused by inherent tendencies of **TCP/IP** networks. It is measured in milliseconds. 
+- Explaining Jitter,
+  - *_Ideal Case_* - A simple network between two computers, `A` & `B`. `A` sends a packet to `B` in `20ms` and B sends a response to `A` in `20ms`. This indicates flow of data to be continous and the neither of the machine experience _jitter_.
+  - *_Practical_* - Supposdely A sends packets every 20ms,yet the roter between A and B is busy handling some other intnsive tasks on the nwtworks. Thus computer B won't receive the packets constantly or evenly, i.e instead of every 20ms, the machine B receives packets with delay(i.e. every 40ms or 60ms). This phenomenon is called Jitter.
+ - There's heavy chance we all have faced the _Jitter_. Remember those lag spikes when playing online video games, where our player teleports across tht map. And that pauses we face while bufferring Youtube videos.
+ - Congestion, improper queuing, configuration errors are some of the reasons of Jitter in TCP/IP networks.
