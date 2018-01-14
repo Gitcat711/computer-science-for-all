@@ -49,4 +49,12 @@ PING google.com (x.x.x.x): 56 data bytes
 
 --------------
 
- 
+ #### 4. What is difference between Bandwidth and throughput?
+> Both *`bandwidth`* and *`throughput`* are metrics used to describe the performance of data transfer over a network segment(a link from point `A`to point `B`).
+
+- **`bandwidth`** - refers to the maximum theoretic amount of data(number of packets) that can be sent on th channel,regardless of practical considerations.
+- **`throughput`** - refers to the actual amount of data that travels through the segment successfully
+- Lets exemplify it,
+  - A _highway_ has the capacity of moving 300 cars at the same time, this is `bandwidth`. But most of the times due to jam or congestion, the actual number of cars that it can move is around 200, this is `throughput`.
+  - This distinction is relevant as ISPs usually advertise their `bandwidth` which is often higher than the `throughput` you will receive.
+- These metrics are computer over _single unit of time_, expressed as _bits/seconds(`bps`)_. Modersn networks are faster and therefore have their speed measured in millions of bits per second -> megabits/sec(`Mbps`) or in billions of bits/sec -> gigabits/sec(Gbps).   
