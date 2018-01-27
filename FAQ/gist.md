@@ -33,3 +33,7 @@ print get_min(my_nums)
  - In this case, a garbage collector can free anything with a reference count of zero.
 
  - This strategy is called reference counting, since we are counting the number of times each object is referenced. 
+ 
+ -----------
+ 
+ 
