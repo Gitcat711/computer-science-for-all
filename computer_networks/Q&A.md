@@ -49,4 +49,19 @@ PING google.com (x.x.x.x): 56 data bytes
 
 --------------
 
- 
+#### 4. What is a URL?
+- **URLs**(_uniform resource locators_) are sequences of characters used to identify resources on the internet. They are specified in the header of the request.
+```
+http://www.google.com:80/path/res?q=x
+|---| |-----------------||------||---|
+protocol | host --------||path--||query|
+```
+  - The **Protocol**, usually `http` or `https`. This part dictates how the data pointed at by the whole url should be processed.
+  - The **Host**, address contains a _subdomain(www)_, a _domain(google.com)_ and a _port number(80)_, usually hidden in a modern browsers.
+  - the resource **path** represents the resource's location on the server.
+  - a **query string**, beginning with `?`, that contains different `field=values&` pairs.(this is abstract definition, we will look into this with deeper dive.)
+
+- A **URL** is not specific to the `HTTP` protocol, but it is a generic and standardised way of locating resources on a network.
+- A _URL_ is subtype of **URI**(_Uniform Resource Identifier_), but accompanied by a "access mechanism" or "network locator"(`http://`).  **Note**: While all _URLs are URI_, **not** all URIs are URLs.
+
+----------------------------
