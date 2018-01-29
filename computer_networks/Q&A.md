@@ -65,3 +65,24 @@ protocol | host --------||path--||query|
 - A _URL_ is subtype of **URI**(_Uniform Resource Identifier_), but accompanied by a "access mechanism" or "network locator"(`http://`).  **Note**: While all _URLs are URI_, **not** all URIs are URLs.
 
 ----------------------------
+#### 5. What are Status Codes?
+- Status codes are 3-digit integers, part of the server's response in HTTP protocol. With URLs and HTTP verbs (_get, post, delete, put, etc_), a client can make requests to the server, which sends back a response containing the _status_ of the request and a message _payload_.
+- The _status code_ indicates whether the request has been successfully processed or not. The code are grouped into _five_ classes:
+  - **Informational messages**(`1xx`): This class was introduced in `HTTP/1.1` and indicates that everything is OK so far and the client can continue with the request.
+  - **Success messages**(`2xx`): These ones tell the client that the client that the request was acknowledged and successfully processed.
+  - **Redirection messages**(`3xx`): These messages imply that further action must be taken to complete the request. Usually, they indicate that different URL must be used to access the resource.
+  - **Client-error messages**(`4xx`): They are used to inform the client there was a problem with their request. The problem could be an invalid URL, missing field or wrongly formatted data.
+  - **Server-error message**(`5xx`): They show that the server failed to process the request.
+- Below is tabular representation of the _class & codes_.
+
+|Class|Code|Text|Comments|
+|-----|------|-----|------|
+|_Success_|`200`|OK|All is well, valid request and response|
+|_Redirection_|`301`|Moved Permamently|Page is now at new location, (_automatic redirect in most modern browsers)_|
+|_Redirection_|`302`|Found|Page is now at new location Temporarily|
+|_Client Error_|`401`|Unauthorized|Page Typically requires login credentials.|
+|_Client Error_|`403`|Forbidden|Server will not allow this request.|
+|_Client Error_|`404`|Not Found|Server cannot find what was asked for|
+|_Server Error_|`500`|Internal Server Error|Generic server failure in responding to the otherwise-valid request
+
+------------------
