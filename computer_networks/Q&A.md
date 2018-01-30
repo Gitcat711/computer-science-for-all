@@ -49,7 +49,6 @@ PING google.com (x.x.x.x): 56 data bytes
 
 --------------
 
-<<<<<<< HEAD
 #### 4. What is a URL?
 - **URLs**(_uniform resource locators_) are sequences of characters used to identify resources on the internet. They are specified in the header of the request.
 ```
@@ -87,23 +86,3 @@ protocol | host --------||path--||query|
 |_Server Error_|`500`|Internal Server Error|Generic server failure in responding to the otherwise-valid request
 
 ------------------
-=======
- #### 4. What is difference between Bandwidth and throughput?
-> Both *`bandwidth`* and *`throughput`* are metrics used to describe the performance of data transfer over a network segment(a link from point `A`to point `B`).
-
-- **`bandwidth`** - refers to the maximum theoretic amount of data(number of packets) that can be sent on th channel,regardless of practical considerations.
-- **`throughput`** - refers to the actual amount of data that travels through the segment successfully
-- Lets exemplify it,
-  - A _highway_ has the capacity of moving 300 cars at the same time, this is `bandwidth`. But most of the times due to jam or congestion, the actual number of cars that it can move is around 200, this is `throughput`.
-  - This distinction is relevant as ISPs usually advertise their `bandwidth` which is often higher than the `throughput` you will receive.
-- These metrics are computer over _single unit of time_, expressed as _bits/seconds(`bps`)_. Modersn networks are faster and therefore have their speed measured in millions of bits per second -> megabits/sec(`Mbps`) or in billions of bits/sec -> gigabits/sec(Gbps).   
------------
-#### 5. What is Jitter?
-- Jitter is defined as the variation in the delay of received packets in computer networks. While we know that **Latency** is the time it takes to move a packet from point A to B, **Jitter** is the _change_ in that time.
-- Jitter, referred as **Packet Delay Variation**(_though both are not completely synonymous , can be used interchangeably_), i an undesirable effect caused by inherent tendencies of **TCP/IP** networks. It is measured in milliseconds. 
-- Explaining Jitter,
-  - *_Ideal Case_* - A simple network between two computers, `A` & `B`. `A` sends a packet to `B` in `20ms` and B sends a response to `A` in `20ms`. This indicates flow of data to be continous and the neither of the machine experience _jitter_.
-  - *_Practical_* - Supposdely A sends packets every 20ms,yet the roter between A and B is busy handling some other intnsive tasks on the nwtworks. Thus computer B won't receive the packets constantly or evenly, i.e instead of every 20ms, the machine B receives packets with delay(i.e. every 40ms or 60ms). This phenomenon is called Jitter.
- - There's heavy chance we all have faced the _Jitter_. Remember those lag spikes when playing online video games, where our player teleports across tht map. And that pauses we face while bufferring Youtube videos.
- - Congestion, improper queuing, configuration errors are some of the reasons of Jitter in TCP/IP networks.
->>>>>>> f78a3e2b48d13876a4f1e9967147a3e32ca9fcdc
