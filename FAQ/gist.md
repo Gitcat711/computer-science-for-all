@@ -32,8 +32,32 @@ print get_min(my_nums)
 
  - In this case, a garbage collector can free anything with a reference count of zero.
 
- - This strategy is called reference counting, since we are counting the number of times each object is referenced. 
- 
+ - This strategy is called reference counting, since we are counting the number of times each object is referenced.
+
  -----------
- 
- 
+
+####  3. What is `in-place` Algorithm?
+ - An **in-place** algorithm operates directly on its input and changes it, instead of creating and returning a new object. This is sometimes called _destructive_, since the original input is "destroyed" when it's edited to create the new output.
+ - **Caution**: `"In-place"` does _not mean "without creating any additional variables!"_ Rather, it means "_without creating a new copy of the input._" In general, an in-place function will only create additional variables that are O(1) space.
+ - Below is nice example.
+
+```python
+def sq_list_in(arr_int_list):
+  # using enumerate() lets us get the index and element
+    for index, element in enumerate(arr_int_list):
+        arr_int_list[index] *= element
+  # We can directly make this function return,
+  #because we are modifying arr_int_list in-place
+    return arr_int_list
+
+def sq_list_out(arr_int_list):
+  # We define new list or allocate a new list with the lenght # of input list.
+  sq_list = [None] * len(arr_int_list)
+
+  for index, element in enumerate(arr_int_list):
+    sq_list[index] =  element ** 2
+
+  return squared_list
+
+ ```
+ -----
