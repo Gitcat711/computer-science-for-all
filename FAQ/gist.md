@@ -65,4 +65,7 @@ def sq_list_out(arr_int_list):
 #### 4. What is Brute-force algorithm?
 -  A brute force algorithm simply tries all possible answers to a question and checks them for correctness.
 
-- It's rarely the most efficient approach, but it can be helpful to consider the time cost of the brute force approach when building an optimised solution. If your solution isn't faster than the brute force approach, it may not be optimal. 
+- It's rarely the most efficient approach, but it can be helpful to consider the time cost of the brute force approach when building an optimised solution. If your solution isn't faster than the brute force approach, it may not be optimal.
+
+-------------
+#### 5.  
