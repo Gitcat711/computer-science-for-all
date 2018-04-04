@@ -68,4 +68,11 @@ def sq_list_out(arr_int_list):
 - It's rarely the most efficient approach, but it can be helpful to consider the time cost of the brute force approach when building an optimised solution. If your solution isn't faster than the brute force approach, it may not be optimal.
 
 -------------
-#### 5.  
+#### 5.  Difference between Compilers and Interpreters.
+- **Compilers:** A compiler is a computer program that transforms(_translates_) source code of programming language(_the source language_) into another computer language(_the target language_). In most cases compilers are used to transform source code into executable program, i.e. they translates code from high-level programming languages into low(sometimes lower) level languages, which are mostly assembly or machine code.
+- **Interpreters:** An interpreter is a computer program that executes instructions written in a programming language. It can either
+    - execute a source code directly or
+    - translates the source code in a first step into a more efficient representation.
+
+  ------------
+  
