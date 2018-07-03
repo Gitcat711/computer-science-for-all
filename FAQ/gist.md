@@ -74,5 +74,14 @@ def sq_list_out(arr_int_list):
     - execute a source code directly or
     - translates the source code in a first step into a more efficient representation.
 
-  ------------
-  
+------------
+#### 6. How many different numbers can we express with 1 byte (8 bits)?
+ - 2​<sup>8 </sup>= 256  different numbers.
+ --------
+#### 7. What happens if we have the number 255 in an 8-bit unsigned integer (1111 1111 in binary) and we add 1?
+
+ - The answer (256) needs a 9th bit (1 0000 0000). But we only have 8 bits. This is called an **_integer overflow_**. At best, we might just get an error. At worst, our computer might compute the correct answer but then just throw out the 9th bit, giving us zero (0000 0000) instead of 256 (1 0000 0000)! (_Python actually notices that the result won't fit and automatically allocates more bits to store the larger number._)
+ - The 256 possibilities we get with 1 byte are pretty limiting. So we usually use 4 or 8 bytes (32 or 64 bits) for storing integers.
+
+    - 32-bit integers have 2<sup>32</sup>​​ possible values—more than 4 billion
+    - 64-bit integers have 2<sup>64</sup>​ possible values—more than 10 billion billion (10<sup>19</sup>).
